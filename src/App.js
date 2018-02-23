@@ -3,20 +3,6 @@ import Board from './Board';
 import sudoku from 'sudoku-umd';
 import './App.css';
 
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <h1 className="App-title">Sudoku</h1>
-//         </header>
-      
-//       </div>
-//     );
-//   }
-// }
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +20,6 @@ class App extends Component {
 
   handleNewGame(e) {
     const newSudoku = sudoku.generate("easy");
-    // const newSudoku = '123456789123456789123456789123456789123456789123456789123456789123456789123456789';
     this.setState({
       initialBoard: newSudoku,
       board: newSudoku
@@ -52,7 +37,7 @@ class App extends Component {
       this.setState({
         board: solve
       });
-  }
+    }
   }
 
   handleRestart(e) {
