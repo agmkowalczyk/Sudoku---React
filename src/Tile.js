@@ -3,22 +3,21 @@ import './Tile.css';
 
 class Tile extends React.Component {
   handleChange(e) {
-    this.props.updateBoard(e.target.name, e.target.value);
+    this.props.updateBoard(e.target.dataset.id, e.target.value);
   }
 
   render() {
     const opts = {};
-    this.props.readonly === 1 ? opts['readOnly'] = 'readOnly' : '';
+    opts['readOnly'] = (this.props.readonly === 1) ? 'readOnly' : '';
 
     return (
       <input 
         type="number" 
         min="1" 
         max="9" 
-        data={this.props.readonly}
+        data-id={this.props.id}
         className={this.props.readonly === 1 ? 'tile readonly' : 'tile'}
         {...opts}
-        name={this.props.id}
         value={!isNaN(this.props.tile) ? this.props.tile : ''} 
         onChange={this.handleChange.bind(this)}
       />
