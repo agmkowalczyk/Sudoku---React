@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+h1 {
+  margin: 5px 0 5px;
+  text-align: center;
+  font-variant: small-caps;
+}
+.buttons {
+  text-align: center;
+  margin: 5px 0 20px;
+}
+.buttons button {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  background: lightsteelblue;
+  width: 100px;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+  font-variant: small-caps;
+}
+.buttons button:hover {
+  background: darkslateblue;
+  color: gainsboro;
+}

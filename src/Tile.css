@@ -1,0 +1,27 @@
+.tile {
+  height: 59px;
+  text-align: center;
+  flex: 0 0 11.11%;
+  border: 1px solid rgb(184, 182, 182);
+  font-size: 1.1em;
+  font-weight: 700;
+  color: darkblue;
+}
+.tile:nth-child(3n) {
+  border-right: 2px solid #000;
+}
+.tile:nth-child(9n) {
+  border: 1px solid rgb(184, 182, 182);
+  border-right: none;
+}
+
+.readonly {
+  color: darkgoldenrod;
+  background: #eaeaea;
+  cursor: default;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  height: 30px;
+}
